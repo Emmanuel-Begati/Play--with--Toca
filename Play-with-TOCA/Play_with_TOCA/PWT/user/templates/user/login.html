@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+        <title>Play WIth TOCA - signup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'user/css/styles.css'%}" rel="stylesheet">
+        
+    </head>
+    <body>
+        
+        <div class="signup-box">
+            <h1 class="signup-header">Play with <span>TOCA</span></h1>
+            <h5 class="signup-prompt">Welcome back a world of learning and fun!</h5>
+            <form method="POST">
+                {%csrf_token%} 
+                {{form.as_p}}
+                <button type="submit" >Login</button>
+            </form>
+            {% if messages %}
+            <ul class="messages">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+    
+      
+        
+    </body>
+    </html>

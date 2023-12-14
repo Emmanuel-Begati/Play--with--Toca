@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+    <head>
+        <title>Play WIth TOCA - signup</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'user/css/styles.css'%}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav-list">
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            <ul>
+              <li><a href="{%url 'home'%}" data-after="Home">Home</a></li>
+              <li>
+                <a href="{%url 'home'%}#services" data-after="Discover"
+                  >Discover</a
+                >
+              </li>
+            </ul>
+          </div>
+        <div class="signup-box">
+            <h1> You have successfully logged out!!</h1>
+            <button><a href="{% url 'login' %}">Login Here</a></button>
+
+        </div>
+    
+        

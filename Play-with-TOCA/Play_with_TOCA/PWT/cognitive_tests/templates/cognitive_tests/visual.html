@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'cognitive_tests/css/visual.css'%}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Caveat:wght@500&family=Roboto:wght@400;500;700&family=Saira+Condensed:wght@500&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <title>cognitive_quiz</title>
+    <style>
+      body {
+        font-family: Balsamiq Sans;
+        margin: 0;
+        padding: 0;
+        background-color: #9adff8;
+      }
+      .quiz-container {
+        background-color: hsl(271, 73%, 87%);
+        max-width: 800px;
+        margin: 0px auto;
+        padding: 20px;
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .quiz-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .answer {
+        display: none;
+      }
+      label {
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px;
+        border: 5px solid black;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        width: 60px;
+        background-color: #fff;
+      }
+      img {
+        max-width: 20%;
+        border-radius: 10px;
+        border: 5px solid #ffdb5e;
+        height: auto;
+        margin-top: 20px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Quiz container starts here -->
+    <div class="quiz-container" id="quiz">
+      <!-- Quiz questions shows here -->
+      <div class="quiz-header">
+        <h2 id="question">Question is loading...</h2>
+        <ul>
+          <li>
+            <input type="radio" name="answer" id="a" class="answer" />
+            <label for="a" id="a_text">Answer...</label>
+            <img id="a_image" alt="Option A Image" />
+          </li>
+          <li>
+            <input type="radio" name="answer" id="b" class="answer" />
+            <label for="b" id="b_text">Answer...</label>
+            <img id="b_image" alt="Option B Image" />
+          </li>
+        </ul>
+      </div>
+      <button id="submit">Submit</button>
+    </div>
+    <!-- Quiz container ends here -->
+    <script src="{% static 'cognitive_tests/js/visual.js'%}"></script>
+  </body>
+</html>
